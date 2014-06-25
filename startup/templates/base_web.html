@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+  <meta charset='utf-8'>
+  <title>Web - {% block titulo %}{% endblock %}</title>
+  <link rel='stylesheet' href='{{STATIC_URL}}css/bootstrap.min.css'>
+  {% block style_css %}{% endblock %}
+  <script src='{{STATIC_URL}}js/bootstrap.min.js'></script>
+</head>
+<body>
+  
+
+
+	<div class="container">
+  {% block encabezado %}{% endblock %}
+  {% block contenido %}{% endblock %}
+  <p>edwin.calsin.academico@gmail.com</p>
+  </div>
+
+  
+  
+</body>
+</html>

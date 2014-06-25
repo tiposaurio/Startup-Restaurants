@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Home - {% block titulo %}{% endblock %}</title>
+  <link rel="stylesheet" href="{{STATIC_URL}}css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{STATIC_URL}}css/simple-sidebar.css">
+
+</head>
+<body>
+  <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+        {% block menu %} {% endblock %}
+            
+        </div>
+
+        <!-- Page content -->
+        <div id="page-content-wrapper">
+            {% block encabezado %}{% endblock %}
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-8">
+                    {% block contenido %}{% endblock %}
+                        
+                    </div>
+                    <div class="col-md-4">
+                        {% for message in messages %}
+    <div  class="{{ message.tags }}"> 
+    <div class="alert alert-success alert-success">
+  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+  <strong>{{ message }} !</strong> {{ datospersona.nombres }} {{ datospersona.apellidos }}
+</div>
+</div>
+{% endfor %}
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+<!-- JavaScript -->
+<script src="{{STATIC_URL}}js/jquery-1.10.2.js"></script>
+<script src="{{STATIC_URL}}js/bootstrap.min.js"></script>
+
+<!-- Custom JavaScript for the Menu Toggle -->
+<script>
+$("#menu-toggle").click(function(e) {
+e.preventDefault();
+$("#wrapper").toggleClass("active");
+});
+</script>
+</html>
