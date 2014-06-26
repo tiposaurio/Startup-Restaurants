@@ -4,21 +4,76 @@
   <meta charset='utf-8'>
   <title>Web - {% block titulo %}{% endblock %}</title>
   <link rel='stylesheet' href='{{STATIC_URL}}css/bootstrap.min.css'>
+  <link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/template.css" type="text/css" media="all">
+  <link rel="stylesheet" type="text/css" href="{{STATIC_URL}}menu/rmm-css/responsivemobilemenu.css" type="text/css">
+
   {% block style_css %}{% endblock %}
   <script src='{{STATIC_URL}}js/bootstrap.min.js'></script>
+  <script type="text/javascript" src='{{STATIC_URL}}js/jquery.min.js'></script>
+  <script type="text/javascript" src='{{STATIC_URL}}menu/rmm-js/responsivemobilemenu.js'></script>
 </head>
+
+
 <body>
+
+<div id="content">
+
+<div class="container">
   
+</div>
 
 
-	<div class="container">
+  <img class="downscale-fit"  src="{{STATIC_URL}}image/fondo.jpg?foo=2&amp;mode=stretch&amp;w=1440&amp;h=900"  style="position: fixed; left: 0px; right: auto;" >
+
+<div id="top_content">
+<div id="header">
+<div class="rmm">
+            <ul>
+                <li><a href='#home'>Home</a></li>
+                <li><a href='#about-me'>Quines Somos</a></li>
+                <li><a href='#gallery'>Registrate</a></li>
+                <li><a href='#login'>Login</a></li> 
+            </ul>
+        </div>
+    
+    <div class="container text-center" id="lead_content">
+    <!-- <a href="#" id="logo_link"> -->
+
+    <img alt="Robinhood logo" class="downscale-fit" id="logo" src="{{STATIC_URL}}image/bon-appetit3.png" data-at2x="./assets/image/bon-appetit2%402x.png">
+    </a>
+    
+    <h1 class="robinhood-tagline light-text">
+    Encuentra tu Restaurant favorito en un clic...
+    </h1>
+    
+
+      <div id="waitlist_wrapper">
+        <form action="#" class="form-inline" method="post" role="form" novalidate="">
+          <div class="form-group" id="waitlist_email_group">
+            <input class="form-control input-lg " id="join_waitlist_email" name="buscar" placeholder="Restaurant, Tipo Comida" size="40">
+
+
+          </div>
+          <div class="form-group">
+            <button class="btn btn-lg btn-default" id="home_waitlist_button" type="submit">
+              Registrate
+            </button>
+          </div>
+        </form>
+
+<div class="container">
   {% block encabezado %}{% endblock %}
   {% block contenido %}{% endblock %}
   <p>edwin.calsin.academico@gmail.com</p>
   <p>elmagwi@gmail.com</p>
-  </div>
+</div>
 
-  
-  
+      </div>
+    </div>
+  </div>
+</div>
+</div> 
+
+
 </body>
 </html>
