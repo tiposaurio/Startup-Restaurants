@@ -12,30 +12,23 @@
   <script type="text/javascript" src='{{STATIC_URL}}js/jquery.min.js'></script>
   <script type="text/javascript" src='{{STATIC_URL}}menu/rmm-js/responsivemobilemenu.js'></script>
 </head>
-
-
 <body>
-
-  <div class="rmm">
+<div class="container">
+<div class="rmm">
             <ul>
-                <li><a href='#home'>Home</a></li>
+                <li><a href='#'>Home</a></li>
                 <li><a href='#about-me'>Quines Somos</a></li>
-                <li><a href='#gallery'>Registrate</a></li>
-                <li><a href='#login'>Login</a></li> 
+                <li><a href='register_user'>Registrate</a></li>
+                <li><a href='login'>Login</a></li> 
             </ul>
         </div>
 
-
-<img class="downscale-fit"  src="{{STATIC_URL}}image/fondo.jpg?foo=2&amp;mode=stretch&amp;w=1440&amp;h=900"  style="position: fixed; left: 0px; right: auto;" >
-
-
-<div class="container">
-  {% block encabezado %}{% endblock %}
+  {% block encabezado %}{% endblock %}  
   {% block contenido %}{% endblock %}
+
   <p>edwin.calsin.academico@gmail.com</p>
   <p>elmagwi@gmail.com</p>
 </div>
-
 
 </body>
 </html>
