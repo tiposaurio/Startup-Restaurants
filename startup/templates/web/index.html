@@ -1,5 +1,54 @@
 {% extends 'base_web.html'%}
 {% block titulo %} Inicio {% endblock %} </title>
 {% block contenido %}
- <h3>startup !</h3>
+ 
+<div id="content">
+
+<div class="container">
+  
+</div>
+
+
+  <img class="downscale-fit"  src="{{STATIC_URL}}image/fondo.jpg?foo=2&amp;mode=stretch&amp;w=1440&amp;h=900"  style="position: fixed; left: 0px; right: auto;" >
+
+<div id="top_content">
+<div id="header">
+
+    
+    <div class="container text-center" id="lead_content">
+    <!-- <a href="#" id="logo_link"> -->
+
+    <img alt="Robinhood logo" class="downscale-fit" id="logo" src="{{STATIC_URL}}image/bon-appetit3.png" data-at2x="./assets/image/bon-appetit2%402x.png">
+    </a>
+    
+    <h1 class="robinhood-tagline light-text">
+    Encuentra tu Restaurant favorito en un clic...
+    </h1>
+    
+
+      <div id="waitlist_wrapper">
+        <form action="#" class="form-inline" method="post" role="form" novalidate="">
+          <div class="form-group" id="waitlist_email_group">
+            <input class="form-control input-lg " id="join_waitlist_email" name="buscar" placeholder="Restaurant, Tipo Comida" size="40">
+
+
+          </div>
+          <div class="form-group">
+            <button class="btn btn-lg btn-default" id="home_waitlist_button" type="submit">
+              Registrate
+            </button>
+          </div>
+        </form>
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+</div> 
+
+
+
+
 {% endblock %}
